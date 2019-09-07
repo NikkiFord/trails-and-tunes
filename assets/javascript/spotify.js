@@ -1,11 +1,10 @@
 
 var accessCode;
-var clientID = "ab78c9bfe2104f2e9e01b86f908541a9";
+var clientID = "ec0013414aaa4ba38073717df9310ea6";
 //project url changes as need it for testing on local server or github
-var ourProjectURL = (typeof localURL !== "undefined") ? localURL : "https://danalittleskier.github.io/ProjectOne/";
+var ourProjectURL = (typeof localURL !== "undefined") ? localURL : "https://trails-and-tunes.nikkiscorner.com";
 
-var encodedProjectURL = encodeURIComponent(ourProjectURL);
-var spotifyURL = "https://accounts.spotify.com/authorize?client_id=" + clientID + "&response_type=token&redirect_uri=" + encodedProjectURL + "&scope=user-read-private%20user-read-email"; // &state=34fFs29kd09"
+var spotifyURL = "https://accounts.spotify.com/authorize?client_id=" + clientID + "&response_type=token&redirect_uri=" + ourProjectURL + "&scope=user-read-private%20user-read-email"; // &state=34fFs29kd09"
 
 //in order to have access to spotify api we need to reload page after login and grab access token
 $(document).ready(function () {
